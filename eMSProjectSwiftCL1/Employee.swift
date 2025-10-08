@@ -12,7 +12,7 @@ class Employee
     var mName : String
     var mEmployeeID : Int
     //unintialized properties
-    
+    var mClockStatus : Bool = false
     //constructor or intializer
     init(name : String, employeeID : Int)
     {
@@ -24,6 +24,46 @@ class Employee
     //getters
     func GetName() -> String {return mName}
     func GetId() -> Int {return mEmployeeID}
+    func GetClockStatus() -> Bool {return mClockStatus}
+    
+    //Methods
+    func CheckClockStatus()
+    {
+        if mClockStatus
+        {
+            print("\(mName) is clocked in.")
+        }
+        else
+        {
+            print("\(mName) is clocked out.")
+        }
+    }
+    
+    func ClockIn()
+    {
+        if !mClockStatus
+        {
+            mClockStatus = !mClockStatus
+            print("\(mName) has clocked in")
+        }
+        else
+        {
+            print("\(mName) is already clocked in.")
+        }
+    }
+    
+    func ClockOut()
+    {
+        if mClockStatus
+        {
+            mClockStatus = !mClockStatus
+            print("\(mName) has clocked out.")
+        }
+        else
+        {
+            print("\(mName) is already clocked out.")
+        }
+    }
 }
 
 class Manager : Employee
@@ -35,19 +75,19 @@ class Manager : Employee
 class Leader : Manager
 {
     //unintialized properties
-    var managerList : [Employee] = [Employee(name: "jj", employeeID: 2)]
+    var managerList : [Manager] = [Manager(name: "jj", employeeID: 2)]
 }
 
 class Administrator : Leader
 {
     //unintialized properties
-    var leaderList : [Employee] = [Employee(name: "jayjay", employeeID: 3)]
+    var leaderList : [Leader] = [Leader(name: "jayjay", employeeID: 3)]
 }
 
 class ITTech : Administrator
 {
     //unintialized properties
-    var adminList : [Employee] = [Employee(name: "jayleen", employeeID: -1)]
+    var adminList : [Administrator] = [Administrator(name: "jayleen", employeeID: -1)]
 }
 
 let iT1 = ITTech(name: "Jayleen Wilson", employeeID: -2)

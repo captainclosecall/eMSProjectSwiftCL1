@@ -22,7 +22,10 @@ while true
             while loggedIn
             {
                 print("Welcome \(iT1.employeeList[i].GetName()) !")
-                print("1.Exit")
+                print("1. Check clock status")
+                print("2. Clock in")
+                print("3. Clock out")
+                print("4.Exit")
                 print("Please select an option:")
                 
                 let employeeMenu = Int(readLine() ?? "")
@@ -30,6 +33,12 @@ while true
                 switch employeeMenu
                 {
                 case 1:
+                    iT1.employeeList[i].CheckClockStatus()
+                case 2:
+                    iT1.employeeList[i].ClockIn()
+                case 3:
+                    iT1.employeeList[i].ClockOut()
+                case 4:
                     loggedIn = false
                     break
                 default:
@@ -46,7 +55,10 @@ while true
             while loggedIn
             {
                 print("Welcome \(iT1.managerList[i].GetName()) !")
-                print("1.Exit")
+                print("1. Check clock status")
+                print("2. Clock in")
+                print("3. Clock out")
+                print("4.Exit")
                 print("Please select an option:")
                 
                 let employeeMenu = Int(readLine() ?? "")
@@ -54,6 +66,12 @@ while true
                 switch employeeMenu
                 {
                 case 1:
+                    iT1.managerList[i].CheckClockStatus()
+                case 2:
+                    iT1.managerList[i].ClockIn()
+                case 3 :
+                    iT1.managerList[i].ClockOut()
+                case 4:
                     loggedIn = false
                     break
                 default:
@@ -70,7 +88,10 @@ while true
             while loggedIn
             {
                 print("Welcome \(iT1.leaderList[i].GetName()) !")
-                print("1.Exit")
+                print("1. Check clock status")
+                print("2. Clock in")
+                print("3. Clock out")
+                print("4.Exit")
                 print("Please select an option:")
                 
                 let employeeMenu = Int(readLine() ?? "")
@@ -78,6 +99,12 @@ while true
                 switch employeeMenu
                 {
                 case 1:
+                    iT1.leaderList[i].CheckClockStatus()
+                case 2:
+                    iT1.leaderList[i].ClockIn()
+                case 3:
+                    iT1.leaderList[i].ClockOut()
+                case 4:
                     loggedIn = false
                     break
                 default:
@@ -94,7 +121,10 @@ while true
             while loggedIn
             {
                 print("Welcome \(iT1.adminList[i].GetName()) !")
-                print("1.Exit")
+                print("1. Check clock status")
+                print("2. Clock in")
+                print("3. Clock out")
+                print("4.Exit")
                 print("Please select an option:")
                 
                 let employeeMenu = Int(readLine() ?? "")
@@ -102,6 +132,12 @@ while true
                 switch employeeMenu
                 {
                 case 1:
+                    iT1.adminList[i].CheckClockStatus()
+                case 2:
+                    iT1.adminList[i].ClockIn()
+                case 3:
+                    iT1.adminList[i].ClockOut()
+                case 4:
                     loggedIn = false
                     break
                 default:
@@ -118,7 +154,10 @@ while true
             while loggedIn
             {
                 print("Welcome \(iTTechList[i].GetName()) !")
-                print("1.Exit")
+                print("1. Check clock status")
+                print("2. Clock in")
+                print("3. Clock out")
+                print("4.Exit")
                 print("Please select an option:")
                 
                 let employeeMenu = Int(readLine() ?? "")
@@ -126,6 +165,12 @@ while true
                 switch employeeMenu
                 {
                 case 1:
+                    iT1.employeeList[i].CheckClockStatus()
+                case 2:
+                    iT1.employeeList[i].ClockIn()
+                case 3:
+                    iT1.employeeList[i].ClockOut()
+                case 4:
                     loggedIn = false
                     break
                 default:
